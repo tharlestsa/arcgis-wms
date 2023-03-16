@@ -24,7 +24,7 @@ Getting Started
 
 The application runs in a Docker environment, using docker-compose to simplify the environment setup and allow the application to run on different platforms and environments.
 
-To start the Personal Seeder API application, follow these steps:
+To start the ArcGIS WMS Demo application, follow these steps:
 
 1.  Install Docker and Docker Compose on your local machine.
 
