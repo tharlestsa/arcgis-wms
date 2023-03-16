@@ -41,7 +41,7 @@ function getFeatureInfo(e) {
   const url = getFeatureInfoUrl(e.latlng);
   if (!url) return;
 
-  axios.post(`/proxy`, {"url": url}, {
+  axios.post(`http://wms.arcgis:8080/proxy`, {"url": url}, {
     headers: {
       'Content-Type': 'application/json'
     }
