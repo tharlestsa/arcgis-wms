@@ -39,11 +39,9 @@ const getFeatureInfoUrl = (latlng) => {
 
 function getFeatureInfo(e) {
   const url = getFeatureInfoUrl(e.latlng);
-  console.log(url)
-
   if (!url) return;
 
-  axios.post(`http://localhost:8003/proxy`, {"url": url}, {
+  axios.post(`/proxy`, {"url": url}, {
     headers: {
       'Content-Type': 'application/json'
     }

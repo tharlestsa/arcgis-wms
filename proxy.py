@@ -6,8 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 import json
 
-class RequestData(BaseModel):
-    url: str
+# class RequestData(BaseModel):
+#     url: str
 
 app = FastAPI()
 
@@ -23,7 +23,7 @@ app.add_middleware(
 app.mount("/", StaticFiles(directory="webmap"), name="webmap")
 
 @app.post("/proxy")
-async def proxy(data: RequestData):
+async def proxy(data:dict):
     response = requests.get(data.url)
     if response.status_code == 200:
         return json.loads(response.content) 
